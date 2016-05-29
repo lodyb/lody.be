@@ -1,0 +1,113 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$width: 40rem;
+
+*{
+	box-sizing:border-box;
+	// outline:1px solid rgba(255,0,85,0.2);
+}
+
+body{
+	position:relative;
+	display:block;
+	margin:0;
+	padding:0;
+	font:16px/24px "Sura", Georgia;
+	background:#eee;
+	color:#272727;
+}
+
+header, footer{
+	padding:4rem 0 2rem 0;
+	background:#eee;
+	text-align:center;
+}
+
+main{
+	padding-bottom:4rem;
+	background:#fff;
+}
+
+header figure{
+	display:block;
+	max-width:$width;
+	margin:0 auto;
+	text-align:center;
+	padding-bottom:1rem;
+}
+nav{
+	display:block;
+	max-width:$width;
+	margin:0 auto;
+	text-align:center;
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+nav a{
+	padding:.5rem 2rem;
+}
+main p,main h2,main h3,main img,main figure, main div{
+	padding:0 2rem;
+	margin:0;
+	max-width:$width;
+	margin:0 auto;
+}
+
+div.created_by{
+	text-align:left;
+	padding:2rem 2rem 1.5rem 2rem;
+	color:#aaa
+}
+
+h1{
+	padding:4rem 2rem;
+	margin:0;
+	background:#272727;
+	color:#fff;
+	font-size:1.6rem;
+	font-weight:200;
+	text-align:center;
+	line-height:2rem;
+}
+
+h1+article{
+	padding-top:2rem;
+}
+
+p{
+	font-size:1rem;
+}
+
+p+p{
+	padding-top:2rem;
+}
+
+svg{
+	height:4rem;
+}
+svg #top{
+	fill:rgba(0,0,0,0.2);
+}
+svg #left{
+	fill:rgba(0,0,0,0.35);
+}
+svg #right{
+	fill:rgba(0,0,0,0.45);
+}
+
+@media(max-width:480px) {
+	nav a{
+		display:block;
+		text-align:center;
+		padding:0.25rem 0;
+	}
+}
+
+.post-block{
+
+}
+.post-block + .post-block{
+	border-top:1px solid #ddd;
+}
