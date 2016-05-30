@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $index = Page::where('release_date', '>', date('U'))
-            ->orderBy('release_date', 'desc')
+            ->orderBy('id', 'desc')
             ->Paginate(15);
 
         return view('index')
@@ -48,7 +48,7 @@ class HomeController extends Controller
         $user = User::whereName($name)->firstOrFail();
         $index = $user->pages()
             ->where('release_date', '>', date('U'))
-            ->orderBy('release_date', 'desc')
+            ->orderBy('id', 'desc')
             ->Paginate(15);
 
         return view('index')

@@ -9,6 +9,7 @@
 @push('main')
 	@foreach ($index as $post)
 	<div onclick="document.location.href = '/post/{{$post->url}}';" class="post-block">
+		<h2>#{{$post->id}}</h2>
 		<p>{{$post->title}}</p>
 		<div class="created_by">posted by
 			<a href="/by/{{$post->user->name}}">
@@ -27,7 +28,7 @@
 		@else
 			<a class="disabled"><</a>
 		@endif
-		posts {{($index->currentPage() - 1) * $index->perPage()}} to 
+		posts {{($index->currentPage() - 1) * $index->perPage() + 1}} to 
 		@if (count($index->items()) % $index->perPage() == 0)
 			{{$index->perPage() * $index->currentPage()}}
 		@else

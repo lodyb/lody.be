@@ -93,7 +93,13 @@ h1{
 	line-height:2rem;
 	text-shadow:1px 1px #000;
 }
-
+h2{
+	color:#444;
+	font-size:1.4rem;
+	font-weight:400;
+	padding:0;
+	margin:0;
+}
 p{
 	font-size:1rem;
 }
@@ -138,9 +144,11 @@ figure a:hover svg #right{
 }
 
 .post-block p{
-	padding-top:2rem;
+	padding-top:1rem;
 }
-
+.post-block h2{
+	padding-top:2rem
+}
 .post-block:hover{
 	background:#0a0a0a;
 	cursor:pointer;
