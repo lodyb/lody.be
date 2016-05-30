@@ -1,5 +1,9 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 body {
   position: relative;
@@ -47,7 +51,11 @@ header a:hover {
   outline: 1px solid #f03; }
 
 main a {
-  color: #f03; }
+  color: #f03;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial; }
 
 nav a {
   padding: .5rem 2rem; }
@@ -56,12 +64,19 @@ main p, main h2, main h3, main img, main figure, main div {
   padding: 0 2rem;
   margin: 0;
   max-width: 40rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial; }
 
 div.created_by {
   text-align: left;
   padding: 1rem 2rem 2rem 2rem;
   color: #aaa; }
+
+article div.created_by {
+  padding-top: 3rem; }
 
 h1 {
   padding: 4rem 2rem;

@@ -3,7 +3,7 @@
 <head>
 	<title>{{$title or 'lody.be'}}</title>
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="/css/app.css">
 	<link href='https://fonts.googleapis.com/css?family=Sura' rel='stylesheet' type='text/css'>
 	@stack('styles')
 </head>
@@ -14,9 +14,9 @@
 		<a href="/">@include('lodyb-logo')</a>
 	</figure>
 	<nav>
-		<a href="#">posts</a>
-		<a href="#">categories</a>
-		<a href="#">media</a>
+		<a href="/">posts</a>
+		<a href="/cat">categories</a>
+		<a href="/media">media</a>
 	</nav>
 </header>
 	@stack('title')

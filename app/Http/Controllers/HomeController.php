@@ -32,6 +32,14 @@ class HomeController extends Controller
             ->with('index', $index);
     }
 
+    public function post($url)
+    {
+        $post = Page::where('url', $url)->firstOrFail();
+
+        return view('post')
+            ->with('post', $post);
+    }
+
     public function mockup()
     {
         return view('mockup');

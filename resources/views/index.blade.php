@@ -8,7 +8,7 @@
 
 @push('main')
 	@foreach ($index as $post)
-	<div href="/post/{{$post->url}}" class="post-block">
+	<div onclick="document.location.href = '/post/{{$post->url}}';" class="post-block">
 		<p>{{$post->title}}</p>
 		<div class="created_by">posted by
 			<a href="/by/{{$post->user->name}}">

@@ -4,6 +4,7 @@ $width: 40rem;
 
 *{
 	box-sizing:border-box;
+	user-select:none;
 	// outline:1px solid rgba(255,0,85,0.2);
 }
 
@@ -57,6 +58,7 @@ header a:hover{
 }
 main a{
 	color:#f03;
+	user-select:initial;
 }
 nav a{
 	padding:.5rem 2rem;
@@ -66,12 +68,16 @@ main p,main h2,main h3,main img,main figure, main div{
 	margin:0;
 	max-width:$width;
 	margin:0 auto;
+	user-select:initial;
 }
 
 div.created_by{
 	text-align:left;
 	padding:1rem 2rem 2rem 2rem;
 	color:#aaa
+}
+article div.created_by{
+	padding-top:3rem;
 }
 
 h1{

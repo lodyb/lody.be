@@ -18,6 +18,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/post/{url}', 'HomeController@post');
+
 Route::get('/mockup', 'HomeController@mockup');
 
 Route::get('/admin', 'BlogController@index');
