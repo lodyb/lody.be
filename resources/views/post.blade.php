@@ -18,6 +18,5 @@
 @endpush
 
 @push('title')
-
 	<h1>{{$post->title}}</h1>
 @endpush
