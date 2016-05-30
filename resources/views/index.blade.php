@@ -23,11 +23,20 @@
 	@if ($index)
 		<h1>
 		@if ($index->currentPage() > 1)
-			<a href="/{{$index->currentPage()}}"><</a>
+			<a href="/?page={{$index->currentPage() - 1}}"><</a>
+		@else
+			<a class="disabled"><</a>
 		@endif
-		posts {{($index->currentPage() - 1) * $index->perPage()}} to {{(count($index->items()) * $index->currentPage())}}
+		posts {{($index->currentPage() - 1) * $index->perPage()}} to 
+		@if (count($index->items()) % $index->perPage() == 0)
+			{{$index->perPage() * $index->currentPage()}}
+		@else
+			{{$index->perPage() * ($index->currentPage() - 1) + count($index->items()) % $index->perPage()}}
+		@endif
 		@if ($index->currentPage() < $index->lastPage())
-			<a href="/{{$index->currentPage() + 1}}">></a>
+			<a href="/?page={{$index->currentPage() + 1}}">></a>
+		@else
+			<a class="disabled">></a>
 		@endif
 		</h1>
 	@else

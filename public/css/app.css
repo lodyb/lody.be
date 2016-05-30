@@ -12,7 +12,7 @@ body {
 
 header, footer {
   padding: 4rem 0 2rem 0;
-  background: #fff;
+  background: #eee;
   text-align: center; }
 
 footer {
@@ -38,6 +38,13 @@ nav {
 a {
   color: #272727;
   text-decoration: none; }
+
+header nav a {
+  padding-bottom: .6rem; }
+
+header a:hover {
+  color: #f03;
+  outline: 1px solid #f03; }
 
 main a {
   color: #f03; }
@@ -76,9 +83,17 @@ p {
 p + p {
   padding-top: 2rem; }
 
+figure a {
+  height: 5.5rem;
+  width: 8rem;
+  padding: 1rem 0;
+  display: block;
+  margin: 0 auto; }
+
 svg {
   height: 4rem;
-  margin-left: -1px; }
+  margin-left: -1px;
+  margin-top: -3px; }
 
 svg #top {
   fill: rgba(0, 0, 0, 0.2); }
@@ -88,6 +103,15 @@ svg #left {
 
 svg #right {
   fill: rgba(0, 0, 0, 0.45); }
+
+figure a:hover svg #top {
+  fill: rgba(255, 0, 30, 0.2); }
+
+figure a:hover svg #left {
+  fill: rgba(255, 0, 30, 0.45); }
+
+figure a:hover svg #right {
+  fill: rgba(255, 0, 30, 0.55); }
 
 .post-block {
   outline: 1px solid #333;
@@ -106,12 +130,33 @@ h1 a {
   color: #f03;
   padding-left: 1rem;
   padding-right: 1rem;
-  position: absolute; }
+  position: relative; }
+
+h1 a.disabled {
+  color: #666; }
+
+::-moz-selection {
+  color: #fff;
+  background: #f05; }
+
+::selection {
+  color: #fff;
+  background: #f05; }
 
 @media (max-width: 480px) {
   nav a {
     display: block;
     text-align: center;
-    padding: 0.25rem 0; } }
+    padding: 0.25rem 0; }
+  main p, main h2, main h3, main img, main figure, main div {
+    padding: 0 1rem;
+    margin: 0;
+    max-width: 40rem;
+    margin: 0 auto; }
+  div.created_by {
+    text-align: left;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    color: #aaa; } }
 
 /*# sourceMappingURL=app.css.map */

@@ -12,11 +12,11 @@
 */
 
 
-Route::auth();
+// Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/{page?}', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('/mockup', 'HomeController@mockup');
 
