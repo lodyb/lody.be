@@ -23,7 +23,7 @@
 	@if ($index)
 		<h1>
 		@if ($index->currentPage() > 1)
-			<a href="/?page={{$index->currentPage() - 1}}"><</a>
+			<a href="?page={{$index->currentPage() - 1}}"><</a>
 		@else
 			<a class="disabled"><</a>
 		@endif
@@ -34,7 +34,7 @@
 			{{$index->perPage() * ($index->currentPage() - 1) + count($index->items()) % $index->perPage()}}
 		@endif
 		@if ($index->currentPage() < $index->lastPage())
-			<a href="/?page={{$index->currentPage() + 1}}">></a>
+			<a href="?page={{$index->currentPage() + 1}}">></a>
 		@else
 			<a class="disabled">></a>
 		@endif
