@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use \App\Page;
+use \App\User;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $index = Page::paginate(15);
+        $index = Page::where('release_date', '>', date('U'))
+            ->orderBy('release_date', 'desc')
+            ->Paginate(15);
 
         return view('index')
             ->with('index', $index);
@@ -38,6 +41,18 @@ class HomeController extends Controller
 
         return view('post')
             ->with('post', $post);
+    }
+
+    public function by($name)
+    {
+        $user = User::whereName($name)->firstOrFail();
+        $index = $user->pages()
+            ->where('release_date', '>', date('U'))
+            ->orderBy('release_date', 'desc')
+            ->Paginate(15);
+
+        return view('index')
+            ->with('index', $index);
     }
 
     public function mockup()
