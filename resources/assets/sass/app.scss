@@ -165,9 +165,22 @@ h1 a.disabled{
 	color:#666;
 }
 
+article img{
+	display:block;
+	max-width:40rem;
+	height:auto;
+	margin:2rem auto 0 auto;
+}
+
 ::selection{
 	color:#fff;
 	background:#f05;
+}
+label + label{
+	padding-left:0.5rem;
+}
+input + label{
+	background:#000;
 }
 @media(max-width:480px) {
 	nav a{
