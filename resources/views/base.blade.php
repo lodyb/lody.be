@@ -13,11 +13,14 @@
 	<figure>
 		<a href="/">@include('lodyb-logo')</a>
 	</figure>
+	{{--
+	navigation can be shelved until content appears
 	<nav>
 		<a href="/">posts</a>
 		<a href="/cat">categories</a>
 		<a href="/media">media</a>
 	</nav>
+	--}}
 </header>
 	@stack('title')
 <main>
