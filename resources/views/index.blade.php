@@ -33,6 +33,7 @@
 		@else
 			{{$index->perPage() * ($index->currentPage() - 1) + count($index->items()) % $index->perPage()}}
 		@endif
+		of {{$index->total()}}
 		@if ($index->currentPage() < $index->lastPage())
 			<a href="?page={{$index->currentPage() + 1}}">></a>
 		@else
