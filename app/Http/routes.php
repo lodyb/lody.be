@@ -22,6 +22,6 @@ Route::get('/post/{url}', 'HomeController@post');
 
 Route::get('/by/{name}', 'HomeController@by');
 
-Route::get('/mockup', 'HomeController@mockup');
+// Route::get('/mockup', 'HomeController@mockup');
 
-Route::get('/admin', 'BlogController@index');
+// Route::get('/admin', 'BlogController@index');
