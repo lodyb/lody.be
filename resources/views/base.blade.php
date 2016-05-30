@@ -23,6 +23,9 @@
 <main>
 	@stack('main')
 </main>
+	@if(isset($index))
+		@stack('title')
+	@endif
 <footer>
 	<p>☆</p>
 </footer>

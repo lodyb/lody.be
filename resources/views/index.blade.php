@@ -24,8 +24,10 @@
 	@if ($index)
 		<h1>
 		@if ($index->currentPage() > 1)
+			<a href="?page=1"><<</a>
 			<a href="?page={{$index->currentPage() - 1}}"><</a>
 		@else
+			<a class="disabled"><<</a>
 			<a class="disabled"><</a>
 		@endif
 		posts {{($index->currentPage() - 1) * $index->perPage() + 1}} to 
@@ -37,9 +39,12 @@
 		of {{$index->total()}}
 		@if ($index->currentPage() < $index->lastPage())
 			<a href="?page={{$index->currentPage() + 1}}">></a>
+			<a href="?page={{$index->lastPage()}}">>></a>
 		@else
 			<a class="disabled">></a>
+			<a class="disabled">>></a>
 		@endif
+		<div>sort by #id descending</div>
 		</h1>
 	@else
 		<h1>Latest Posts</h1>
