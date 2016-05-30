@@ -12,22 +12,20 @@ body{
 	display:block;
 	margin:0;
 	padding:0;
-	font:16px/24px "Hiragino Kaku", Osaka, 'MS PGothic', Georgia;
-	background:#000;
-	color:#444;
+	font:16px/24px "Sura", Georgia;
+	background:#eee;
+	color:#272727;
 }
 
 header, footer{
 	padding:4rem 0 2rem 0;
-	background:#fff;
+	background:#eee;
 	text-align:center;
 }
-footer{
-	padding-bottom:4rem;
-}
+
 main{
-	padding-bottom:2rem;
-	background:#000;
+	padding-bottom:4rem;
+	background:#fff;
 }
 
 header figure{
@@ -44,11 +42,8 @@ nav{
 	text-align:center;
 }
 a{
-	color:#272727;
+	color:#666;
 	text-decoration:none;
-}
-main a{
-	color:#f03;
 }
 nav a{
 	padding:.5rem 2rem;
@@ -62,20 +57,19 @@ main p,main h2,main h3,main img,main figure, main div{
 
 div.created_by{
 	text-align:left;
-	padding:1rem 2rem 2rem 2rem;
+	padding:2rem 2rem 1.5rem 2rem;
 	color:#aaa
 }
 
 h1{
 	padding:4rem 2rem;
 	margin:0;
-	background:url('/gfx/title.png') #272727;
+	background:#272727;
 	color:#fff;
-	font-size:1.4rem;
-	font-weight:400;
+	font-size:1.6rem;
+	font-weight:200;
 	text-align:center;
 	line-height:2rem;
-	text-shadow:1px 1px #000;
 }
 
 h1+article{
@@ -92,7 +86,6 @@ p+p{
 
 svg{
 	height:4rem;
-	margin-left:-1px
 }
 svg #top{
 	fill:rgba(0,0,0,0.2);
@@ -104,33 +97,17 @@ svg #right{
 	fill:rgba(0,0,0,0.45);
 }
 
-.post-block{
-	outline:1px solid #333;
-	display:block;
-	margin-top:2rem;
-}
-
-.post-block p{
-	padding-top:2rem;
-}
-
-.post-block:hover{
-	background:#0a0a0a;
-	cursor:pointer;
-	outline-color:#f03;
-}
-
-h1 a{
-	color:#f03;
-	padding-left:1rem;
-	padding-right:1rem;
-	position:absolute;
-}
-
 @media(max-width:480px) {
 	nav a{
 		display:block;
 		text-align:center;
 		padding:0.25rem 0;
 	}
+}
+
+.post-block{
+
+}
+.post-block + .post-block{
+	border-top:1px solid #ddd;
 }

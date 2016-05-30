@@ -24,7 +24,7 @@
 	@stack('main')
 </main>
 <footer>
-	<p>Talk to me about your idea</p>
+	<p>☆</p>
 </footer>
 @stack('scripts')
 </body>
