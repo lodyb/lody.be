@@ -14,7 +14,7 @@ body{
 	margin:0;
 	padding:0;
 	font:16px/24px "Hiragino Kaku", Osaka, 'MS PGothic', Georgia;
-	background:#000;
+	background:#eee;
 	color:#444;
 }
 
@@ -27,7 +27,7 @@ footer{
 	padding-bottom:4rem;
 }
 main{
-	padding-bottom:2rem;
+	padding:2rem 0;
 	background:#000;
 }
 
@@ -140,9 +140,10 @@ figure a:hover svg #right{
 .post-block{
 	outline:1px solid #333;
 	display:block;
+}
+.post-block + .post-block{
 	margin-top:2rem;
 }
-
 .post-block p{
 	padding-top:1rem;
 }
