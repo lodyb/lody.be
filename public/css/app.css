@@ -215,6 +215,9 @@ label + label {
 input + label {
   background: #000; }
 
+article ul {
+  margin: 0; }
+
 article ul li + li {
   padding-top: 0rem; }
 
@@ -240,7 +243,7 @@ article pre {
   -ms-user-select: initial;
   user-select: initial; }
 
-@media (max-width: 480px) {
+@media (max-width: 40rem) {
   nav a {
     display: block;
     text-align: center;
@@ -253,6 +256,8 @@ article pre {
     text-align: left;
     padding: 0rem;
     padding-bottom: 2rem;
-    color: #aaa; } }
+    color: #aaa; }
+  article img {
+    width: 100%; } }
 
 /*# sourceMappingURL=app.css.map */
