@@ -61,7 +61,6 @@ nav a {
   padding: .5rem 2rem; }
 
 main p, main h2, main h3, main img, main figure, main div {
-  padding: 0 2rem;
   margin: 0;
   max-width: 40rem;
   margin: 0 auto;
@@ -72,20 +71,50 @@ main p, main h2, main h3, main img, main figure, main div {
 
 div.created_by {
   text-align: left;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 0rem 2rem 0rem;
   color: #aaa; }
 
 article div.created_by {
   padding-top: 2rem; }
 
 article {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  max-width: 40rem;
+  margin: 0 auto; }
+
+article * + * {
+  padding-top: 2rem; }
+
+article hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0rem;
+  height: 0; }
+
+article pre {
+  margin: 0; }
+
+main article * + h2 {
+  padding-top: 2rem; }
+
+article blockquote {
+  padding: 1rem;
+  margin: 0;
+  margin-top: 2rem;
+  border-left: 2rem solid #272727;
+  outline: 1px solid #272727; }
+
+article iframe {
+  width: 100%; }
 
 h1 {
   padding: 4rem 2rem;
   margin: 0;
   background: url("/gfx/title.png") #272727;
-  color: #fff;
+  color: #ccc;
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
@@ -137,7 +166,8 @@ figure a:hover svg #right {
 
 .post-block {
   outline: 1px solid #333;
-  display: block; }
+  display: block;
+  padding: 0 2rem; }
 
 .post-block + .post-block {
   margin-top: 2rem; }
@@ -168,6 +198,9 @@ article img {
   height: auto;
   margin: 2rem auto 0 auto; }
 
+article div.created_by {
+  padding-bottom: 0; }
+
 ::-moz-selection {
   color: #fff;
   background: #f05; }
@@ -182,19 +215,37 @@ label + label {
 input + label {
   background: #000; }
 
+article ul li + li {
+  padding-top: 0rem; }
+
+article ul li {
+  list-style: square; }
+
+article pre {
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #ccc;
+  background: url("/gfx/title.png") #272727;
+  line-height: 2rem;
+  text-shadow: 1px 1px #000;
+  font: 16px/24px "Hiragino Kaku", Osaka, 'MS PGothic', Georgia;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial; }
+
 @media (max-width: 480px) {
   nav a {
     display: block;
     text-align: center;
     padding: 0.25rem 0; }
   main p, main h2, main h3, main img, main figure, main div {
-    padding: 0 1rem;
     margin: 0;
     max-width: 40rem;
     margin: 0 auto; }
   div.created_by {
     text-align: left;
-    padding: 1rem;
+    padding: 0rem;
     padding-bottom: 2rem;
     color: #aaa; } }
 
